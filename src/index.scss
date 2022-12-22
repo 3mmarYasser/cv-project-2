@@ -12,6 +12,10 @@ body {
 .customize-btn{
     @apply  capitalize mr-5 rounded-[5px] py-1 h-[2.7rem] min-h-[2.7rem];
 }
+.nav-menu :where(li:not(.menu-title):not(:empty)) > :where(:not(ul).active), .menu :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):active){
+  @apply text-primary;
+  background-color: unset;
+}
 
 
 
