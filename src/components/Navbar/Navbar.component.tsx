@@ -66,15 +66,14 @@ const Navbar:React.FC = () => {
                     <Link to={"/register"} className="btn btn-primary customize-btn ">Get started</Link>
                 </div>
 
-                <label className="btn btn-ghost lg:hidden z-20 swap swap-rotate" >
+                <label className="btn btn-ghost lg:hidden z-50 swap swap-rotate" >
                     <input type="checkbox" onClick={()=>setMenu(!menu)}/>
                     <div className="swap-on"><IoMdClose className="h-6 w-6"/></div>
                     <div className="swap-off"><FcMenu className="h-6 w-6"/></div>
                 </label>
             </div>
 
-            {
-                <div className={`bg-base-200 fixed left-0 right-0 z-10 h-full top-0 w-screen transition-all duration-[400ms]`} style={{left: `${(menu) ? "0" : "-150%"}`}}>
+                <div className={`bg-base-200 fixed left-0 right-0 z-40 h-full top-0 w-screen transition-all duration-[400ms]`} style={{left: `${(menu) ? "0" : "-150%"}`}}>
                     <ul className="menu nav-menu px-1 w-full justify-center items-center">
                         <li><NavLink className="font-bold " to={"/"}>Home</NavLink></li>
                         <li><NavLink className="font-bold " to={"/Resume"}>Resume</NavLink></li>
@@ -85,7 +84,6 @@ const Navbar:React.FC = () => {
                         <li><Link to={"/register"} className="btn btn-primary btn-wide mt-5">Get started</Link></li>
                     </ul>
                 </div>
-            }
 
 
 
