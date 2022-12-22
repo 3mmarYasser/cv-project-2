@@ -8,7 +8,7 @@ const Navbar:React.FC = () => {
     return (
         <>
             <div className={`bg-base-200 fixed left-0 right-0 top-0 z-40  w-screen h-screen transition-all duration-[400ms]`} style={{left: `${(menu) ? "0" : "-150%"}`}}>
-                <ul className="menu nav-menu px-1 w-full justify-center items-center">
+                <ul className="menu nav-menu px-1 h-full w-full justify-center items-center">
                     <li><NavLink className="font-bold " to={"/"}>Home</NavLink></li>
                     <li><NavLink className="font-bold " to={"/Resume"}>Resume</NavLink></li>
                     <li><NavLink className="font-bold " to={"/CV"}>CV</NavLink></li>
@@ -19,7 +19,7 @@ const Navbar:React.FC = () => {
                 </ul>
             </div>
 
-            <nav className="navbar fixed bg-base-100 p-4 md:p-8">
+            <nav className="navbar bg-base-100 p-4 md:p-8">
 
                 <div className="navbar-start">
                     <Link to={"/"} className="">
