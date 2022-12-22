@@ -21,7 +21,7 @@ import Styles  from "./../../Home.module.scss"
 
  const AnimationLine = () => {
      return (
-         <div className={classNames("line-cv-animation space-y-4 mx-2",[Styles.HomeAnimation])}>
+         <div className={classNames("line-cv-animation space-y-4 mx-2 relative",[Styles.HomeAnimation])}>
              {
                  images.map((image, index) => {
                      return (

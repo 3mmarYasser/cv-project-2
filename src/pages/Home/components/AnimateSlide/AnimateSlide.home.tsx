@@ -19,8 +19,8 @@ const AnimateSlide:React.FC = () => {
                         <Link to="/resume/build" className="btn btn-primary btn-wide shadow-2xl customize-btn text-primary-content m-5 sm:m-auto">Build my resum now</Link>
                     </div>
                 </div>
-                <div tabIndex={0} className="flex overflow-y-clip  absolute  top-0 w-[40rem] right-0">
-                    <div className="flex justify-center relative h-[55vh]  w-[40rem]  rotate-[-21deg]">
+                <div tabIndex={0} className="absolute flex overflow-y-clip top-0 w-[40rem] right-0">
+                    <div className="relative flex justify-center relative h-[55vh]  w-[40rem]  rotate-[-21deg]">
                         <AnimationLine/>
                         <AnimationLine/>
                         <AnimationLine/>
