@@ -17,6 +17,21 @@ body {
   @apply text-primary;
   background-color: unset;
 }
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+
+
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  --tw-text-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-text-opacity));
+  border-radius: 3px;
+}
 
 
 

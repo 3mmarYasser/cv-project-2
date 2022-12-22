@@ -1,0 +1,13 @@
+.HomeAnimation {
+  animation-name: line-cv;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  height: fit-content;
+}
+
+@keyframes line-cv {
+  100% {
+    transform: translateY(-100%);
+  }
+}

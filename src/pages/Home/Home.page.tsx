@@ -1,10 +1,11 @@
 import React from 'react';
+import AnimateSlideHome from "./components/AnimateSlide/AnimateSlide.home";
 
 const Home:React.FC = () => {
     return (
-        <div>
-            Home
-        </div>
+        <main>
+            <AnimateSlideHome/>
+        </main>
     );
 };
 
