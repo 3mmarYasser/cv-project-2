@@ -7,7 +7,7 @@ const Navbar:React.FC = () => {
 
     return (
         <>
-            <div className={`bg-base-200 fixed left-0 right-0 z-40 h-full top-0 w-screen transition-all duration-[400ms]`} style={{left: `${(menu) ? "0" : "-150%"}`}}>
+            <div className={`bg-base-200 fixed left-0 right-0 z-40 h-screen top-0 w-screen transition-all duration-[400ms]`} style={{left: `${(menu) ? "0" : "-150%"}`}}>
                 <ul className="menu nav-menu px-1 w-full justify-center items-center">
                     <li><NavLink className="font-bold " to={"/"}>Home</NavLink></li>
                     <li><NavLink className="font-bold " to={"/Resume"}>Resume</NavLink></li>
