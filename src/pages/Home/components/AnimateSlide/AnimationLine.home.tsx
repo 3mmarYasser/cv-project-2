@@ -1,3 +1,5 @@
+import React from 'react';
+import classNames from "classnames";
 import Styles  from "./../../Home.module.scss"
 
  let images: string[] = [
@@ -16,8 +18,6 @@ import Styles  from "./../../Home.module.scss"
      "https://d.novoresume.com/images/doc/modern-cv-template.png",
  ]
 
- import React from 'react';
- import classNames from "classnames";
 
  const AnimationLine = () => {
      return (
