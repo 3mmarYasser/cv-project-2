@@ -19,7 +19,7 @@ const Navbar:React.FC = () => {
                 </ul>
             </div>
 
-            <nav className="navbar bg-base-100 p-4 md:p-8">
+            <nav className="navbar fixed z-40 bg-base-100 p-4 md:p-8">
 
                 <div className="navbar-start">
                     <Link to={"/"} className="">

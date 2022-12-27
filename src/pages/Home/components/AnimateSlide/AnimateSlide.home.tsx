@@ -4,7 +4,7 @@ import AnimationLine from "./AnimationLine.home";
 
 const AnimateSlide:React.FC = () => {
     return (
-        <div tabIndex={0} className="w-screen">
+        <div tabIndex={0} className="w-screen mt-20">
             <div className="container relative  mx-auto h-[55vh]   px-5 sm:px-2 grid">
                 <div tabIndex={1} className="max-w-[45rem] mx-auto flex flex-col justify-center self-center z-10 md:mx-auto md:w-full  lg:mr-[40rem]">
                    <span className="uppercase text-xl md:text-2xl font-bold">

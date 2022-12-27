@@ -7,7 +7,7 @@ const App:React.FC = () => {
     return (
         <BrowserRouter>
             <Suspense fallback={<div>loading</div>}>
-                <div className="overflow-x-hidden">
+                <div className="overflow-hidden">
                     <NavbarComponent/>
                     <Routes>
                         <Route index element={<HomePage/>}/>
