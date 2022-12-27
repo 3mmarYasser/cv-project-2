@@ -1,9 +1,10 @@
-import React, {Suspense} from 'react';
+import React, {Suspense, useEffect} from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import HomePage from "../pages/Home/Home.page";
 import NavbarComponent from "../components/Navbar/Navbar.component";
 
 const App:React.FC = () => {
+
     return (
         <BrowserRouter>
             <Suspense fallback={<div>loading</div>}>
