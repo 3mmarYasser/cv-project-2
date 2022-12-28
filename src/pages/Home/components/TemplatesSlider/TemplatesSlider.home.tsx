@@ -1,10 +1,8 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {FreeMode, A11y, Autoplay} from "swiper";
-
+import {FreeMode, A11y, Autoplay, Navigation} from "swiper";
 import "swiper/scss";
 import "swiper/scss/free-mode";
-import "swiper/scss/pagination";
 import "swiper/scss/autoplay"
 import TemplateCard from "./TemplateCard.home";
 import {Template} from "../../home.interface";
@@ -17,9 +15,10 @@ interface Props {
 const TemplatesSlider:React.FC<Props> = ({data,preLink,delay}) => {
     return (
         <Swiper
-            slidesPerView={7}
+            slidesPerView={1}
             spaceBetween={0}
             direction={'horizontal'}
+            grabCursor={true}
             pagination={{
                 clickable: true,
             }}
@@ -30,19 +29,15 @@ const TemplatesSlider:React.FC<Props> = ({data,preLink,delay}) => {
             autoplay={{
                 delay,
                 disableOnInteraction: false,
-                waitForTransition: false,
+                waitForTransition: true,
             }}
             speed={2000}
-
             breakpoints={{
                 "320": {
-                    slidesPerView: 1.5,
-                },
-                "400": {
                     slidesPerView: 2,
                 },
                 "450": {
-                    slidesPerView: 2.5,
+                    slidesPerView: 3,
                 },
                 "768": {
                     slidesPerView: 4,
@@ -53,7 +48,11 @@ const TemplatesSlider:React.FC<Props> = ({data,preLink,delay}) => {
                 "1280": {
                     slidesPerView: 6,
                 },
-                "1600": {
+                "1650": {
+                    slidesPerView: 8,
+                }
+                ,
+                "1800": {
                     slidesPerView: 9.5,
                 }
             }}
