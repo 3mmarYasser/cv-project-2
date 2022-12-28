@@ -8,7 +8,7 @@ interface Props {
 }
 const TemplateCard:React.FC<Props> = ({title,url,image}) => {
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center w-44 p-0">
             <div className="relative shadow-lg h-60 w-44 overflow-hidden ">
                 <img className="w-full h-full" src={image} alt={title}/>
                 <div className="absolute  bottom-2 left-0 w-full px-3">

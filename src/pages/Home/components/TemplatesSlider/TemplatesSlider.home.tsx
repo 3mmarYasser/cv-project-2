@@ -18,7 +18,7 @@ const TemplatesSlider:React.FC<Props> = ({data,preLink,delay}) => {
     return (
         <Swiper
             slidesPerView={7}
-            spaceBetween={30}
+            spaceBetween={0}
             direction={'horizontal'}
             pagination={{
                 clickable: true,
@@ -36,24 +36,25 @@ const TemplatesSlider:React.FC<Props> = ({data,preLink,delay}) => {
 
             breakpoints={{
                 "320": {
-                    slidesPerView: 2.5,
-                    spaceBetween: 30,
+                    slidesPerView: 1.5,
+                },
+                "400": {
+                    slidesPerView: 2,
+                },
+                "450": {
+                    slidesPerView: 1.7,
                 },
                 "768": {
                     slidesPerView: 4,
-                    spaceBetween: 30,
                 },
                 "1024": {
                     slidesPerView: 5,
-                    spaceBetween: 30,
                 },
                 "1280": {
                     slidesPerView: 6,
-                    spaceBetween: 30,
                 },
                 "1600": {
-                    slidesPerView: 7,
-                    spaceBetween: 30,
+                    slidesPerView: 9.5,
                 }
             }}
         >
