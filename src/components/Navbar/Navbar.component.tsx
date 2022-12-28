@@ -1,12 +1,24 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link, NavLink} from "react-router-dom";
 import {FcMenu, GrClose, IoMdClose, MdMenuOpen, MdOutlineKeyboardArrowDown} from "react-icons/all";
+import classNames from "classnames";
 
 const Navbar:React.FC = () => {
-    const [menu, setMenu] = useState(false);
+    const [menu, setMenu] = useState<boolean>(false);
+    const [scrolled,setScrolled]=useState<boolean>(false)
+
+    useEffect(():ReturnType<any>=>{
+        window.addEventListener("scroll",() => {
+            if(window.scrollY > 30){
+                setScrolled(true)
+            }else setScrolled(false)
+        });
+        return () => window.removeEventListener
+    },[])
 
     return (
         <>
+
             <div className={`bg-base-200 fixed left-0 right-0 top-0 z-40  w-screen h-screen transition-all duration-[400ms]`} style={{left: `${(menu) ? "0" : "-150%"}`}}>
                 <ul className="menu nav-menu px-1 h-full w-full justify-center items-center">
                     <li><NavLink className="font-bold " to={"/"}>Home</NavLink></li>
@@ -19,7 +31,7 @@ const Navbar:React.FC = () => {
                 </ul>
             </div>
 
-            <nav className="navbar fixed z-40 bg-base-100 p-4 md:p-8">
+            <nav className={classNames("navbar fixed z-40 bg-base-100 transition-all duration-[100ms]",{"p-5 md:p-12":!scrolled},{"p-2 md:p-4":scrolled})}>
 
                 <div className="navbar-start">
                     <Link to={"/"} className="">

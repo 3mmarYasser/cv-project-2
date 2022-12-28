@@ -1,15 +1,22 @@
 import React from 'react';
 import AnimateSlideHome from "./components/AnimateSlide/AnimateSlide.home";
 import StepsHome from "./components/Steps.home/Steps.home";
-import TitleBadge from "../../components/TitleBadge/TitleBadge";
+import TitleBadgeComponent from "../../components/TitleBadge/TitleBadge.component";
+import TemplatesSliderHome from "./components/TemplatesSlider/TemplatesSlider.home";
 
 const Home:React.FC = () => {
     return (
         <main>
             <AnimateSlideHome/>
-            <TitleBadge title={"three simple steps to a job-winning"}/>
+            <TitleBadgeComponent title={"three simple steps to a job-winning"}/>
             <StepsHome/>
-            <TitleBadge title={"Resume Templates"}/>
+            <TitleBadgeComponent title={"Resume Templates"}/>
+            <TemplatesSliderHome/>
+            <TitleBadgeComponent title={"CV Templates"}/>
+            <TemplatesSliderHome/>
+            <TitleBadgeComponent title={"Cover Letter Templates"}/>
+            <TemplatesSliderHome/>
+
         </main>
     );
 };
