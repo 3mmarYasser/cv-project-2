@@ -6,7 +6,15 @@ import "swiper/scss";
 import "swiper/scss/free-mode";
 import "swiper/scss/pagination";
 import "swiper/scss/autoplay"
-const TemplatesSlider = () => {
+import TemplateCard from "./TemplateCard.home";
+import {Template} from "../../home.interface";
+
+interface Props {
+    data:Template[],
+    preLink:string,
+    delay:number
+}
+const TemplatesSlider:React.FC<Props> = ({data,preLink,delay}) => {
     return (
         <Swiper
             slidesPerView={7}
@@ -16,15 +24,15 @@ const TemplatesSlider = () => {
                 clickable: true,
             }}
             modules={[FreeMode, A11y, Autoplay]}
-            className="mySwiper  by-10"
+            className="mySwiper  by-10 mt-8 mb-40"
             centeredSlides={true}
             loop={true}
             autoplay={{
-                delay: -1,
+                delay,
                 disableOnInteraction: false,
                 waitForTransition: false,
             }}
-            speed={1000}
+            speed={2000}
 
             breakpoints={{
                 "320": {
@@ -49,10 +57,9 @@ const TemplatesSlider = () => {
                 }
             }}
         >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
+            {data.map((template , index)=>(
+                <SwiperSlide key={index+template.id}><TemplateCard image={template.image} title={template.title} url={`/${preLink}/${template.title}`}/></SwiperSlide>
+            ))}
         </Swiper>
     );
 };
