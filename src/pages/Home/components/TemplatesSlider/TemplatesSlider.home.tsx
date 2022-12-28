@@ -42,7 +42,7 @@ const TemplatesSlider:React.FC<Props> = ({data,preLink,delay}) => {
                     slidesPerView: 2,
                 },
                 "450": {
-                    slidesPerView: 1.7,
+                    slidesPerView: 2.5,
                 },
                 "768": {
                     slidesPerView: 4,
