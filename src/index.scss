@@ -20,6 +20,14 @@ body {
   @apply text-primary;
   background-color: unset;
 }
+.lang-select{
+  @apply  appearance-none w-full max-w-fit pl-8 pr-5 py-2 font-normal border border-solid  rounded transition ease-in-out m-0 focus:outline-none relative;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: left 0.7rem top 50%;
+  background-size: 0.8rem auto;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   border-radius: 5px;
