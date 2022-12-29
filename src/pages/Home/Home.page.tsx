@@ -5,6 +5,7 @@ import TitleBadgeComponent from "../../components/TitleBadge/TitleBadge.componen
 import TemplatesSliderHome from "./components/TemplatesSlider/TemplatesSlider.home";
 import {TemplatesCoverLetter, TemplatesCV, TemplatesResume} from "./home.fakedata";
 const Home:React.FC = () => {
+
     return (
         <main>
             <AnimateSlideHome/>

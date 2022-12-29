@@ -16,14 +16,14 @@ const TemplatesSlider:React.FC<Props> = ({data,preLink,delay}) => {
     return (
         <Swiper
             slidesPerView={1}
-            spaceBetween={0}
+            spaceBetween={10}
             direction={'horizontal'}
             grabCursor={true}
             pagination={{
                 clickable: true,
             }}
             modules={[FreeMode, A11y, Autoplay]}
-            className="mySwiper  by-10 mt-8 mb-40"
+            className="mySwiper  by-10 mt-8 mb-20 md:mb-40"
             centeredSlides={true}
             loop={true}
             autoplay={{
@@ -35,9 +35,11 @@ const TemplatesSlider:React.FC<Props> = ({data,preLink,delay}) => {
             breakpoints={{
                 "320": {
                     slidesPerView: 2,
+                    spaceBetween:20
                 },
                 "450": {
                     slidesPerView: 3,
+                    spaceBetween:20
                 },
                 "768": {
                     slidesPerView: 4,
