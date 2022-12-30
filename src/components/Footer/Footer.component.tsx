@@ -32,11 +32,11 @@ const Footer = () => {
                     <a className="link link-hover">Terms of Use</a>
                 </div>
                 <div className="flex justify-center items-center w-full">
-                    <select className="bg-neutral text-neutral-content border-neutral-content lang-select" style={{backgroundImage:`url(${globalSvg})`}} aria-label="Default select example">
-                        <option selected>Arabic</option>
-                        <option value="1">Engish</option>
-                        <option value="2">Japanese</option>
-                        <option value="3">Italian</option>
+                    <select className="bg-neutral text-neutral-content border-neutral-content lang-select" defaultValue={"ar"} style={{backgroundImage:`url(${globalSvg})`}} aria-label="Default select example">
+                        <option value="ar">Arabic</option>
+                        <option value="en">Engish</option>
+                        <option value="jp">Japanese</option>
+                        <option value="it">Italian</option>
                     </select>
                 </div>
             </div>

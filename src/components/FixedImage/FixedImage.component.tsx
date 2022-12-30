@@ -12,8 +12,8 @@ const FixedImage:React.FC = () => {
         <>
             <input type="checkbox" checked={show} readOnly={true} className="modal-toggle"/>
             <div className="modal modal-bottom sm:modal-middle" onClick={()=>dispatch(close())}>
-                <div className="modal-box">
-                        <img src={image} alt={"FixedImage"}/>
+                <div className="modal-box w-full">
+                        <img className="w-full max-h-[70vh] min-h-[50vh]" src={image} alt={"FixedImage"}/>
                 </div>
             </div>
         </>

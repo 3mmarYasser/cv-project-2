@@ -7,7 +7,7 @@ import {TemplatesCoverLetter, TemplatesCV, TemplatesResume} from "./home.fakedat
 const Home:React.FC = () => {
 
     return (
-        <main>
+        <>
             <AnimateSlideHome/>
             <TitleBadgeComponent title={"three simple steps to a job-winning"}/>
             <StepsHome/>
@@ -17,7 +17,7 @@ const Home:React.FC = () => {
             <TemplatesSliderHome data={TemplatesCV} preLink={"cv"} delay={4000}/>
             <TitleBadgeComponent title={"Cover Letter Templates"}/>
             <TemplatesSliderHome data={TemplatesCoverLetter} preLink={"cover-letter"} delay={3700}/>
-        </main>
+        </>
     );
 };
 
