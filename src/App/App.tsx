@@ -1,9 +1,9 @@
 import React, {Suspense} from 'react';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import HomePage from "../pages/Home/Home.page";
 import NavbarComponent from "../components/Navbar/Navbar.component";
 import NotFoundPage from "../pages/NotFound/NotFound.page";
-import EditorPage from "../pages/ResumeEditor/Editor.page";
+import EditorPage from "../pages/Editor/Editor.page";
 import FixedImageComponent from "../components/FixedImage/FixedImage.component";
 import FooterComponent from "../components/Footer/Footer.component";
 const App:React.FC = () => {
@@ -18,7 +18,12 @@ const App:React.FC = () => {
                             <Route index element={<HomePage/>}/>
                             <Route path="dashboard">
                                 <Route index element={<div>Dash</div>}/>
-                                <Route path={"build"} element={<EditorPage/>}/>
+                                <Route path={"resume"}>
+                                    <Route path={"build"}>
+                                        <Route index element={<Navigate to={"new"}/>}/>
+                                        <Route path={":id"} element={<EditorPage type={"resume"}/>}/>
+                                    </Route>
+                                </Route>
                             </Route>
                             <Route path={"*"} element={<NotFoundPage/>}/>
                         </Routes>
