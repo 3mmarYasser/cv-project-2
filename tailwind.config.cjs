@@ -38,9 +38,9 @@ module.exports = {
       {
         "main":{
           ...require("daisyui/src/colors/themes")["[data-theme=light]"],
-
           "primary": "#17ACAC",
           "neutral": "#000000",
+          "--rounded-btn": "0.3rem"
 
         }
       },

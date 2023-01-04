@@ -1,7 +1,13 @@
 import React from 'react';
 import globalSvg from "../../assets/global.svg"
-
-const Footer = () => {
+import {matchRoutes, RouteObject, useLocation, useMatch} from "react-router-dom";
+interface Props{
+    hiddenRouts:RouteObject[]
+}
+const Footer:React.FC<Props> = ({hiddenRouts}) => {
+    const location = useLocation()
+    const hidden = matchRoutes(hiddenRouts,location);
+    if(hidden !== null) return null
     return (
         <footer className="p-10 bg-gradient-to-b from-neutral to-neutral/90  text-neutral-content">
             <div className="footer footer-center md:footer ">
@@ -32,7 +38,7 @@ const Footer = () => {
                     <a className="link link-hover">Terms of Use</a>
                 </div>
                 <div className="flex justify-center items-center w-full">
-                    <select className="bg-neutral text-neutral-content border-neutral-content lang-select" defaultValue={"ar"} style={{backgroundImage:`url(${globalSvg})`}} aria-label="Default select example">
+                    <select className="bg-neutral text-neutral-content border-neutral-content pl-8 pr-5 py-2 custom-select" defaultValue={"ar"} style={{backgroundImage:`url(${globalSvg})`}} aria-label="Default select example">
                         <option value="ar">Arabic</option>
                         <option value="en">Engish</option>
                         <option value="jp">Japanese</option>

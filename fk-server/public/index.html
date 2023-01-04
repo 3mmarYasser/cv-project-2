@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Api</title>
+</head>
+<style>
+    body {
+        background-color: #2C3E50;
+        font-family: sans-serif;
+        color: white;
+    }
+    header {
+        margin: 10px auto;
+        text-align: center;
+        border-bottom: 1px solid #34495E;
+    }
+    h1, h3 { margin: 10px; }
+    .demos {
+        display: block;
+    }
+    .demos div span:nth-child(2) {
+        margin-left: 30px;
+        line-height: 35px;
+    }
+    .demo-up {
+        display: block;
+        height: 35px;
+        position: relative;
+        color: #2ECC71;
+    }
+    .demo-slow {
+        display: block;
+        height: 35px;
+        position: relative;
+        color: #F1C40F;
+    }
+    .demo-down {
+        display: block;
+        height: 35px;
+        position: relative;
+        color: #E74C3C;
+    }
+
+    /** Server status css **/
+    .server-status {
+        left: 10px;
+        top: 50%;
+        margin-left: 0px;
+        margin-top: -5px;
+        position: absolute;
+        vertical-align: middle;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    .server-status::before,
+    .server-status::after {
+        left: 0;
+        top: 50%;
+        margin-left: -1px;
+        margin-top: -6px;
+        position: absolute;
+        vertical-align: middle;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+    .server-status[type="up"],
+    .server-status[type="up"]::before,
+    .server-status[type="up"]::after {
+        background: #2ECC71;
+    }
+    .server-status[type="down"],
+    .server-status[type="down"]::before,
+    .server-status[type="down"]::after {
+        background: #E74C3C;
+    }
+    .server-status[type="slow"],
+    .server-status[type="slow"]::before,
+    .server-status[type="slow"]::after {
+        background: #F1C40F;
+    }
+
+    .server-status::before {
+        content: "";
+        animation: bounce 1.5s infinite;
+    }
+    .server-status::after {
+        content: "";
+        animation: bounce 1.5s -0.4s infinite;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes bounce {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+</style>
+<body>
+<header>
+    <h1>Cv Project Fake Server</h1>
+    <h3>by Ammar</h3>
+</header>
+<div class="demos">
+    <div class="demo-up">
+        <span class="server-status" type="up"></span>
+        <span>Server is running without issues.</span>
+    </div>
+</div></body>
+</html>

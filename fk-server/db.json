@@ -1,0 +1,20 @@
+{
+  "sections": [
+    {
+      "id": 0,
+      "name": "Hello0"
+    },{
+      "id": 1,
+      "name": "hello1"
+    }
+  ],
+  "templates": [
+    {
+      "id": 0,
+      "name": "Hello0"
+    },{
+      "id": 1,
+      "name": "hello1"
+    }
+  ]
+}

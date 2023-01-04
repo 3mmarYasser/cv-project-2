@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {Link, NavLink} from "react-router-dom";
+import {Link, matchRoutes, NavLink, RouteObject, useLocation} from "react-router-dom";
 import {FcMenu, GrClose, IoMdClose, MdMenuOpen, MdOutlineKeyboardArrowDown} from "react-icons/all";
 import classNames from "classnames";
-
-const Navbar:React.FC = () => {
+interface Props{
+    hiddenRouts:RouteObject[]
+}
+const Navbar:React.FC<Props> = ({hiddenRouts}) => {
     const [menu, setMenu] = useState<boolean>(false);
     const [scrolled,setScrolled]=useState<boolean>(false)
 
@@ -16,8 +18,11 @@ const Navbar:React.FC = () => {
         return () => window.removeEventListener
     },[])
 
+    const location = useLocation()
+    const hidden = matchRoutes(hiddenRouts,location);
+    if(hidden !== null) return null
     return (
-        <>
+        <div className="mb-20 md:mb-36 ">
 
             <div className={`bg-base-200 fixed left-0 right-0 top-0 z-40  w-screen h-screen transition-all duration-[400ms]`} style={{left: `${(menu) ? "0" : "-150%"}`}}>
                 <ul className="menu nav-menu px-1 h-full w-full justify-center items-center">
@@ -87,8 +92,8 @@ const Navbar:React.FC = () => {
                 <div className="navbar-end ">
 
                     <div className={"hidden lg:flex"}>
-                        <Link to={"/login"} className="btn btn-outline customize-btn font-bold">login</Link>
-                        <Link to={"/register"} className="btn btn-primary customize-btn ">Get started</Link>
+                        <Link to={"/login"} className="btn btn-outline customize-btn capitalize mr-5 font-bold">login</Link>
+                        <Link to={"/register"} className="btn btn-primary customize-btn capitalize ">Get started</Link>
                     </div>
 
                     <label className="btn btn-ghost lg:hidden z-50 swap swap-rotate" >
@@ -102,7 +107,7 @@ const Navbar:React.FC = () => {
 
 
             </nav>
-        </>
+        </div>
     );
 };
 
